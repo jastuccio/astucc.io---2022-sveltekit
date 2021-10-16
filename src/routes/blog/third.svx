@@ -1,0 +1,10 @@
+---
+title: investing
+tags:
+  - personal
+date: 2020-02-04
+---
+
+# {title}
+
+## winna winna
