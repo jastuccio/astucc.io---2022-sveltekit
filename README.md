@@ -1,38 +1,30 @@
-# create-svelte
+This is my personal website, [astucc.io](https://astucc.io/)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+This blog is a poem to myself. It helps me to code... I may also add posts about camping, travel, kayaking, or other things I enjoy.
+built with the amazing [SvelteKit!](https://kit.svelte.dev/)
 
-## Creating a project
+TODO:
 
-If you're seeing this, you've probably already done this step. Congrats!
+- use TypeScript strictmode
+- add Sanitize.css
+- import dev.to posts
+- web design in 4 minutes https://jgthms.com/web-design-in-4-minutes/#spacing
+- set up prettier/eslint
+- Add category tags
+- favicon? ❌
+- deploy staging on Netlify
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+- point astucc.io to this new blog site
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+Done:
 
-> Note: the `@next` is temporary
+✅
 
-## Developing
+Reference:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- https://github.com/sveltejs/kit/tree/master/packages/adapter-netlify#using-netlify-forms
 
-```bash
-npm run dev
+  - Netlify Forms https://github.com/sveltejs/kit/tree/master/packages/adapter-netlify#using-netlify-forms
+  - Netlify functions https://github.com/sveltejs/kit/tree/master/packages/adapter-netlify#using-netlify-functions
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+- a11y accessibility testing https://www.a11yproject.com/resources/#development-tools
