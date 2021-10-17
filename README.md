@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a646151b-01b1-47d2-a339-889c7a1f9bb2/deploy-status)](https://app.netlify.com/sites/astuccio-2022/deploys)
+
 This is my personal website, [astucc.io](https://astucc.io/)
 
 This blog is a poem to myself. It helps me to code... I may also add posts about camping, travel, kayaking, or other things I enjoy.
