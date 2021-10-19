@@ -1,9 +1,9 @@
 <script>
-	import Nav from 'src/components/Nav.svelte';
+	import Header from '../../src/components/Header.svelte';
 </script>
 
-<div class="container">
-	<Nav />
+<div class=".container">
+	<Header />
 	<slot />
 </div>
 

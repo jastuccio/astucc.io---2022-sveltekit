@@ -15,24 +15,36 @@
 	}
 
 	export const load = async () => {
-		const localPosts = await Promise.all(body);
-
+		const posts = await Promise.all(body);
 		return {
 			props: {
-				localPosts
+				posts
 			}
 		};
 	};
 </script>
 
-<!-- lang="ts" -->
 <script>
-	export let localPosts = [];
+	export let posts; // receive posts
+</script>
+
+<ul>
+	{#each posts as { path, metadata: { title, date } }}
+		<li>
+			<a href={`/blog${path.replace(/\.\.*\w*/gi, '')}`}>{title}</a>
+		</li>
+	{/each}
+</ul>
+
+<!-- 
+<script>
+	export let posts = [];
 	// console.log('unsorted: ', localPosts);
 
-	const postsSortedByDate = localPosts.slice().sort((post1, post2) => {
+	const postsSortedByDate = posts.slice().sort((post1, post2) => {
 		return new Date(post2.metadata.date) - new Date(post1.metadata.date);
 	});
+	JSON.stringify(postsSortedByDate);
 	// console.log('sorted: ', postsSortedByDate);
 </script>
 
@@ -51,6 +63,34 @@
 	</li>
 {/each}
 
+<script context="module">
+	/* * glob imports come from vite
+	 * https://vitejs.dev/guide/features.html#glob-import
+	 */
+	const localPosts = import.meta.glob('./*.{md,svx}');
+
+	let body = [];
+	for (let path in localPosts) {
+		body.push(
+			localPosts[path]().then(({ metadata }) => {
+				return { path, metadata };
+			})
+		);
+	}
+
+	export const load = async () => {
+		const posts = await Promise.all(body);
+
+		return {
+			props: {
+				posts
+			}
+		};
+	};
+</script>
+
+
+ -->
 <style>
 	p {
 		margin: 0;
